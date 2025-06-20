@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexander Paul D. Gravador | Web Developer</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --accent: #6366f1;
+      --card-bg: #f4f4f4;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --accent: #818cf8;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg) url('') no-repeat center center fixed;
+      color: var(--text);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header, section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 1000;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skill {
+      background: var(--card-bg);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: var(--card-bg);
+      color: var(--text);
+    }
+
+    .contact-form button {
+      padding: 12px 30px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #4f46e5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><strong>Alexander Paul D. Gravador</strong></div>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+  <img src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/473719288_883502843860220_4749350497688458581_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGqdLiVKUHdTyrxaUi2ai2_dw6Iu1qN_653Doi7Wo3_rpowuToZWBplVcseH5uX5lr0XtSXuDsoPzm6Uge3UZKt&_nc_ohc=H_yNAfs8618Q7kNvwFvDIE-&_nc_oc=AdnhO72cy10ueKvbS8CrlUSuZkFDXDdq-wy-DDzzYh2RbyJv8GgZlE1LLJFS7PYFPgU&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=myyKtAK5TCfK9602wZeNEA&oh=00_AfO6y-dtD7DX3jwOSgDCY1XMwm3yjILolJo1PPY4ZjMMIA&oe=685AB06E"
+  <h1>Hi, I'm Alexander Paul D. Gravador</h1>
+  <p>Web Developer & UI/UX Enthusiast</p>
+</header>
+
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid" id="projectGrid">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Node.js</span>
+      <span class="skill">Git</span>
+      <span class="skill">Figma</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Alexander Paul D. Gravador — Portfolio Website
+  </footer>
+
+  <script>
+    const projects = [
+      { title: "Dev Portfolio", description: "Fully responsive personal website with light/dark mode." },
+      { title: "E-commerce App", description: "React-based online store with cart functionality." },
+      { title: "Chat App", description: "Real-time chat app with WebSocket and Node.js." },
+      { title: "Blog CMS", description: "Custom blog with admin panel and Markdown support." }
+    ];
+
+    function displayProjects() {
+      const grid = document.getElementById("projectGrid");
+      grid.innerHTML = projects.map(p => `
+        <div class="project-card">
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+        </div>
+      `).join('');
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.setAttribute(
+        "data-theme",
+        html.getAttribute("data-theme") === "dark" ? "light" : "dark"
+      );
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    displayProjects();
+  </script>
+
+</body>
+</html>
